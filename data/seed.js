@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Quiz = require('../models/Quiz');
 require('dotenv').config();
 
-mongoose.connect("mongodb://localhost:27017/live-Quiz-data", { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb://localhost:27017/live-quiz-data", { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('MongoDB connected');
     return Quiz.insertMany(
